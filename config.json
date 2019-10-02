@@ -1,0 +1,29 @@
+{
+    "name": "ha_infinitive",
+    "version": "1.00",
+    "slug": "ha_infinitive",
+    "description": "Carrier Infinitive for Home Assistant",
+    "startup": "before",
+    "boot": "auto",
+    "arch": ["aarch64","armhf", "armv7", "i386", "amd64"],
+    "kernel_modules": true,
+    "auto_uart": true,
+    "udev": true,
+    "options": {
+        "httpport": 8081,
+	 	    "serial": "/dev/ttyUSB0",
+		    "mode": "release"
+    },
+    "schema": {
+        "httpport": "int",
+		    "serial": "str",
+		    "mode": "str"
+    },
+	"ports": {
+        "8081/tcp": 8081
+	},
+    "devices": [
+      "/dev/bus/usb:/dev/bus/usb:rwm",
+      "/dev/mem:/dev/mem:rw"
+    ]
+}
