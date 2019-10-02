@@ -14,13 +14,13 @@ RUN \
     else \
         wget -O /usr/local/bin/infinitive https://github.com/acd/infinitive/releases/download/v0.2/infinitive.arm; \
     fi
+#COPY data/infinitive.amd64 /usr/local/bin/infinitive
+#COPY data/infinitive.arm /usr/local/bin/infinitive
+
 
 COPY data/run.sh /run.sh
 RUN chmod a+x /usr/local/bin/infinitive
 RUN chmod a+x /run.sh
-
-#RUN export GIN_MODE=release
-#ENTRYPOINT [ "infinitive", "-httpport=8081", "-serial=/dev/ttyUSB0" ]
 
 WORKDIR /
 CMD [ "/run.sh" ]

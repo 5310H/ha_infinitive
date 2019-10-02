@@ -1,6 +1,6 @@
 {
     "name": "ha_infinitive",
-    "version": "1.00",
+    "version": "1.01",
     "slug": "ha_infinitive",
     "description": "Carrier Infinitive for Home Assistant",
     "startup": "before",
@@ -17,7 +17,7 @@
     "schema": {
         "httpport": "int",
 		    "serial": "str",
-		    "mode": "str"
+        "mode": "str"
     },
 	"ports": {
         "8081/tcp": 8081
