@@ -8,13 +8,14 @@ RUN apk add --no-cache libc6-compat
 RUN apk add --no-cache jq
 RUN apk add --no-cache wget
 
-RUN \
-    if [ "${BUILD_ARCH}" = "amd64" ]; then \
-        wget -O /usr/local/bin/infinitive https://github.com/5310h/infinitive/releases/download/v0.2/infinitive.amd64; \
-    else \
-        wget -O /usr/local/bin/infinitive https://github.com/5310h/infinitive/releases/download/v0.2/infinitive.arm; \
-    fi
-#COPY data/infinitive.amd64 /usr/local/bin/infinitive
+#RUN \
+#    if [ "${BUILD_ARCH}" = "amd64" ]; then \
+#        wget -O /usr/local/bin/infinitive https://github.com/5310h/ha_infinitive/data/ha_infinitive.amd64; \
+#         COPY data/ha_infinitive.amd64 /usr/local/bin/infinitive
+#    else \
+#        wget -O /usr/local/bin/infinitive https://github.com/5310h/ha_infinitive/data/infinitive.arm; \
+#    fi
+COPY data/ha_infinitive.amd64 /usr/local/bin/infinitive
 #COPY data/infinitive.arm /usr/local/bin/infinitive
 
 
