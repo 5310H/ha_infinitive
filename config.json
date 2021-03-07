@@ -3,11 +3,10 @@
     "version": "2.00",
     "slug": "ha_infinitive",
     "description": "Carrier Infinitive for Home Assistant",
-    "startup": "before",
+    "startup": "application",
     "boot": "auto",
     "arch": ["aarch64","armhf", "armv7", "i386", "amd64"],
     "kernel_modules": true,
-    "auto_uart": true,
     "udev": true,
     "options": {
         "httpport": 8081,
@@ -23,7 +22,7 @@
         "8081/tcp": 8081
 	},
     "devices": [
-      "/dev/bus/usb:/dev/bus/usb:rwm",
-      "/dev/mem:/dev/mem:rw"
+      "/dev/bus/usb",
+      "/dev/mem"
     ]
 }
