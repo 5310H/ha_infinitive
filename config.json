@@ -1,6 +1,6 @@
 {
     "name": "ha_infinitive",
-    "version": "3.69",
+    "version": "4.01",
     "slug": "infinitive",
     "description": "Carrier Infinitive for Home Assistant",
     "boot": "auto",
